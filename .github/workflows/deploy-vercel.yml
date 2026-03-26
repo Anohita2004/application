@@ -37,7 +37,11 @@ jobs:
         VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
         VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
       run: |
-        vercel --prod --token $VERCEL_TOKEN
+        if [ -z "$VERCEL_TOKEN" ]; then
+          echo "Error: VERCEL_TOKEN GitHub secret is not set or is empty."
+          exit 1
+        fi
+        vercel --prod --token "$VERCEL_TOKEN"
 
     - name: ✅ Deployment successful
       run: echo "Frontend deployed successfully!"
