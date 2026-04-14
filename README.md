@@ -10,7 +10,7 @@ A full-stack web application for creating and sharing beautiful image postcards.
 - **Responsive Design** - Works seamlessly on desktop and mobile
 - **Fast & Modern** - Built with React and Vite for optimal performance
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 - **React 19** - UI library
